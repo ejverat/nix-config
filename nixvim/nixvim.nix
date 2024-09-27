@@ -205,7 +205,7 @@
       }
       {
         mode = "n";
-        key = "<C-f>";
+        key = "<leader>f";
         action = "vim.lsp.buf.format";
         options = {
           desc = "LSP format";

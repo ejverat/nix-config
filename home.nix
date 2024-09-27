@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  pkgsUnstable = import <nixpkgs-unstable> { };
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -21,6 +24,7 @@
   programs.home-manager.enable = true;
   targets.genericLinux.enable = true;
 
+  #pkgs.chromium
   home.packages = [
     pkgs.bat
     pkgs.brightnessctl
@@ -30,10 +34,10 @@
     pkgs.eza
     pkgs.fira-code-nerdfont
     pkgs.glow
-    pkgs.chromium
     pkgs.hyprshot
     pkgs.kmonad
     pkgs.mise
+    pkgsUnstable.prusa-slicer
     pkgs.ripgrep
     pkgs.rofi-wayland
     pkgs.rofi-power-menu

@@ -10,6 +10,7 @@
     ./harpoon.nix
     ./hop.nix
     ./lsp.nix
+    ./neo-tree.nix
     ./nvim-cmp.nix
     ./oil.nix
     ./rainbow-delimiters.nix
