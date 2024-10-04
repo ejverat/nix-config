@@ -35,7 +35,7 @@
       }
       {
         name = "powerlevel10k-config";
-        src = ../p10k-config;
+        src = ./p10k-config;
         file = ".p10k.zsh";
       }
     ];
@@ -51,7 +51,7 @@
 
     envExtra = "";
 
-    initExtra = builtins.readFile ../.zshrc;
+    initExtra = builtins.readFile ./.zshrc;
 
     history = {
       size = 10000;
