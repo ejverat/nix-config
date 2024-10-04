@@ -21,38 +21,6 @@
     };
   };
 
-  # outputs =
-  #   {
-  #     self,
-  #     nixpkgs,
-  #     home-manager,
-  #     nixvim,
-  #     # flake-parts,
-  #     ...
-  #   }@inputs:
-  #   let
-  #     system = "x86_64-linux";
-  #     pkgs = nixpkgs.legacyPackages.${system};
-  #   in
-  #   {
-  #     defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-  #     homeConfigurations."ejverat" = home-manager.lib.homeManagerConfiguration {
-  #       inherit pkgs;
-  #
-  #       # Specify your home configuration modules here, for example,
-  #       # the path to your home.nix.
-  #       modules = [
-  #         nixvim.homeManagerModules.nixvim
-  #         ./home.nix
-  #         ./nix_modules
-  #         ./nixvim
-  #       ];
-  #
-  #       # Optionally use extraSpecialArgs
-  #       # to pass through arguments to home.nix
-  #     };
-  #   };
-
   outputs =
     {
       self,

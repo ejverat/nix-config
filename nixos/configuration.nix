@@ -81,6 +81,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Install hyprland.
+  programs.hyprland.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -98,6 +101,7 @@
     neovim
     wezterm
     git
+    kitty
   ];
 
   # default editor
