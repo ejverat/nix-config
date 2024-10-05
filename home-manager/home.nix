@@ -87,6 +87,10 @@
     thefuck
     wl-clipboard
     zsh-powerlevel10k
+    spotube
+    python312Packages.deemix
+    mplayer
+    lazygit
   ];
 
   # Enable home-manager and git
