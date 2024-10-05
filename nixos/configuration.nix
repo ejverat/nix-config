@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "gear4th"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -67,6 +67,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ejverat = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Emmanuel Vera";
     extraGroups = [
@@ -84,6 +85,9 @@
   # Install hyprland.
   programs.hyprland.enable = true;
 
+  # Install zsh.
+  programs.zsh.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -99,6 +103,7 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
     neovim
+    zsh
     wezterm
     git
     kitty
