@@ -51,7 +51,7 @@
 
     envExtra = "";
 
-    initExtra = builtins.readFile ./.zshrc;
+    # initExtra = builtins.readFile ./.zshrc;
 
     history = {
       size = 10000;

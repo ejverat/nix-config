@@ -76,11 +76,18 @@
     ];
     packages = with pkgs; [
       #  thunderbird
+      fira-code-nerdfont
+      terminus-nerdfont
+
     ];
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    package = pkgs.firefox;
+    nativeMessagingHosts.packages = [ pkgs.firefoxpwa ];
+  };
 
   # Install hyprland.
   programs.hyprland.enable = true;
@@ -107,6 +114,7 @@
     wezterm
     git
     kitty
+    firefoxpwa
   ];
 
   # default editor
@@ -115,9 +123,12 @@
   # Mount drives
   fileSystems."/mnt/LDATA" = {
     device = "/dev/disk/by-uuid/e17e2c9e-2a3b-4dee-9a5b-4ff8a8cdd522";
-    fsType = "ext4";
+    fsType = "auto";
     options = [
-      "users"
+      "defaults"
+      "user"
+      "rw"
+      "exec"
       "nofail"
       "x-gvfs-show"
     ];

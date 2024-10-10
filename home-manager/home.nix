@@ -73,7 +73,6 @@
     cowsay
     devenv
     eza
-    fira-code-nerdfont
     glow
     hyprshot
     kmonad
@@ -91,6 +90,14 @@
     python312Packages.deemix
     mplayer
     lazygit
+    pavucontrol
+    blueman
+    flameshot
+    redshift
+    discord
+    hyprshot
+    sway
+    kicad-unstable
   ];
 
   # Enable home-manager and git
