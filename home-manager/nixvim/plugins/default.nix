@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./alpha.nix
     ./autopairs.nix
     ./autotag.nix
     ./blankline.nix
