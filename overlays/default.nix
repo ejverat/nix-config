@@ -1,5 +1,6 @@
 # This file defines overlays
-{inputs, ...}: {
+{ inputs, ... }:
+{
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs final.pkgs;
 
@@ -10,6 +11,24 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
+    # kicad-unstable =
+    #   (prev.kicad-unstable.overrideAttrs (oldAttrs: {
+    #     nativeBuildInputs = (oldAttrs.nativeBuildInputs or [ ]) ++ [ prev.pkgs.protobuf3_20 ];
+    #     # cmakeFlags = (oldAttrs.cmakeFlags or [ ]) ++ [ "-DCMAKE_PREFIX_PATH=${final.pkgs.protobuf3_20}" ];
+    #   })).override
+    #     {
+    #       srcs = {
+    #         kicadVersion = "dev-zoom-fix";
+    #         kicad = prev.fetchFromGitLab {
+    #           owner = "ejverat";
+    #           repo = "kicad";
+    #           rev = "bd86a74bcf332b41875c3230f8ecfb32d5fcebfe";
+    #           sha1 = "sha1-4i6btAkrBOwqyuikwaSfweqS/q4=";
+    #         };
+    #       };
+    #       debug = true;
+    #     };
+    # );
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

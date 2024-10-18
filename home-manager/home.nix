@@ -97,6 +97,9 @@
     discord
     hyprshot
     sway
+    webcamoid
+    teams-for-linux
+    # kicad dependencies
     kicad-unstable
   ];
 
