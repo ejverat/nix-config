@@ -99,8 +99,9 @@
     sway
     webcamoid
     teams-for-linux
+    zoom-us
     # kicad dependencies
-    kicad-unstable
+    # kicad-unstable
   ];
 
   # Enable home-manager and git

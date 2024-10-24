@@ -130,7 +130,7 @@
           #  into multiple repos for maintenance purposes.
           { name = "nvim_lsp"; }
           { name = "path"; }
-          # { name = "codeium"; }
+          { name = "codeium"; }
         ];
       };
     };

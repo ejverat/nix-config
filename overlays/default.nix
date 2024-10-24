@@ -13,8 +13,9 @@
     # });
     # kicad-unstable =
     #   (prev.kicad-unstable.overrideAttrs (oldAttrs: {
+    #     # buildInputs = (oldAttrs.buildInputs or [ ]) ++ [ prev.pkgs.protobuf3_20 ];
     #     nativeBuildInputs = (oldAttrs.nativeBuildInputs or [ ]) ++ [ prev.pkgs.protobuf3_20 ];
-    #     # cmakeFlags = (oldAttrs.cmakeFlags or [ ]) ++ [ "-DCMAKE_PREFIX_PATH=${final.pkgs.protobuf3_20}" ];
+    #     # configureFlags = (oldAttrs.configureFlags or [ ]) ++ [ "-DPROTOBUF_DIR=${prev.pkgs.protobuf3_20}" ];
     #   })).override
     #     {
     #       srcs = {
@@ -26,9 +27,9 @@
     #           sha1 = "sha1-4i6btAkrBOwqyuikwaSfweqS/q4=";
     #         };
     #       };
-    #       debug = true;
+    #       stable = false;
+    #       # optionals.withI18n = false;
     #     };
-    # );
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

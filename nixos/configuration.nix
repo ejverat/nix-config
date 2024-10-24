@@ -115,6 +115,7 @@
     git
     kitty
     firefoxpwa
+    protobuf3_20
   ];
 
   # default editor

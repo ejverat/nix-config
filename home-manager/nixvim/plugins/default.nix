@@ -1,11 +1,12 @@
 { ... }:
 {
   imports = [
-    ./alpha.nix
+    # ./alpha.nix
     ./autopairs.nix
     ./autotag.nix
     ./blankline.nix
     ./conform.nix
+    ./floaterm.nix
     ./fugitive.nix
     ./gitsigns.nix
     ./harpoon.nix
