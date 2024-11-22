@@ -23,7 +23,7 @@
     ./btop.nix
     ./direnv.nix
     ./hyprland.nix
-    ./mako.nix
+    #./mako.nix
     ./neovim.nix
     ./rofi.nix
     ./tmux.nix
